@@ -616,7 +616,6 @@ class Transformer_Encoder(nn.Module):
                                                                           four_pos_shared=self.four_pos_shared,
                                                                           four_pos_fusion=self.four_pos_fusion,
                                                                           four_pos_fusion_embedding=self.four_pos_fusion_embedding
-
                                                                           ))
 
         self.layer_preprocess = Layer_Process(self.layer_preprocess_sequence, self.hidden_size)

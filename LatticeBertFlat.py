@@ -31,7 +31,6 @@ class Lattice_Transformer_SeqLabel(nn.Module):
 	             scaled=True,
 	             dropout=None,
 	             vocabs=None,
-	             rel_pos_shared=True,
 	             max_seq_len=-1,
 	             k_proj=True,
 	             q_proj=True,
@@ -65,7 +64,6 @@ class Lattice_Transformer_SeqLabel(nn.Module):
 		:param scaled: 是否对 QK的值进行 放缩
 		:param dropout: 是否 dropout
 		:param vocabs: 词典, 词典中至少要提供 lattice
-		:param rel_pos_shared: 是否对 四个P矩阵之间参数共享, 注意在P矩阵不可学习的情况下, 四个P矩阵参数共享无意义,因其初始化一样
 		:param max_seq_len: 序列的最大长度
 		:param k_proj: 是否对 tf 中的 key 进行映射 默认 True
 		:param q_proj: 是否对 tf 中的 query 进行映射 默认 True

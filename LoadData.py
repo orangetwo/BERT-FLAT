@@ -1,7 +1,7 @@
 # Author   : Orange
 # Coding   : Utf-8
 # @Time    : 2021/9/25 2:59 下午
-# @File    : load_data.py
+# @File    : LoadData.py
 import os
 
 from fastNLP import Vocabulary
