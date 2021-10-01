@@ -595,6 +595,8 @@ class Transformer_Encoder(nn.Module):
             ff_size = hidden_size
         self.ff_size = ff_size
 
+        # 对于 paper中四个P矩阵 这里仅提供 跨层共享的版本
+        # 如果 要设置 跨层不共享的P矩阵 本代码需要略微调整
         for i in range(self.num_layers):
             setattr(self, 'layer_{}'.format(i), Transformer_Encoder_Layer(hidden_size, num_heads,
                                                                           learnable_position,
